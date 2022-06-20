@@ -1,4 +1,5 @@
 import pathlib
+
 import random, string
 
 
@@ -14,12 +15,14 @@ def writeRandomText(file):
 
 BASE_DIR = pathlib.Path(__file__).parent
 
+
 print(f"BASE_DIR:{BASE_DIR}")
+
 print(type(BASE_DIR))
 
 
-def Generate dummy files():
-    new_files = []
+def Generate_dummy_files():
+    new_files = [] = jls_extract_def()
     for y in range(1, 5):
         year_dir = BASE_DIR / "DATA" / f"year200{y}"
         year_dir.mkdir()
@@ -33,4 +36,7 @@ def Generate dummy files():
                 new_file.touch()
                 writeRandomText(new_file)
 
+
 # Scan files
+p = pathlib.Path(BASE_DIR)
+print(list(p.glob("**/*.csv").name))
